@@ -1,19 +1,23 @@
 call plug#begin('~/.vim/plugged')
 
-" NERDTree for project navigation
+" Existing plugins
 Plug 'preservim/nerdtree'
-
-" fzf for fuzzy file finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" One Dark Pro Color Scheme
 Plug 'joshdick/onedark.vim'
-
-" Vue JS syntax highlighting and snippets
 Plug 'posva/vim-vue'
 
+" Add indentLine plugin
+Plug 'Yggdroot/indentLine'
+
 call plug#end()
+
+" Existing configurations
+
+" Add indentLine settings below
+" Example customization (uncomment and modify as needed):
+" let g:indentLine_char = '|'
+" let g:indentLine_color_gui = '#A4E57E'
 
 " Automatically open NERDTree when Vim starts
 autocmd vimenter * NERDTree
@@ -27,12 +31,6 @@ set background=dark
 colorscheme onedark
 
 " Key Mapping
-"
-" control + o to open the file explorer
 nnoremap <silent> <C-o> :Files<CR>
-
-" control + n to toggle NERDTree
 nmap <C-n> :NERDTreeToggle<CR>
-
-" control + f to find in all files
 nnoremap <silent> <C-f> :Rg<CR>
