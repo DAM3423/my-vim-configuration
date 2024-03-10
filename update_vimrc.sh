@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Check if the updated .vimrc file exists in the current directory
 if [ -f "./.vimrc" ]; then
     # Backup the existing .vimrc in the home directory
@@ -8,12 +6,11 @@ if [ -f "./.vimrc" ]; then
         cp "$HOME/.vimrc" "$HOME/.vimrc.backup"
     fi
 
-    # Move the updated .vimrc to the home directory
+    # Copy the updated .vimrc to the home directory instead of moving
     echo "Updating .vimrc in the home directory"
-    mv "./.vimrc" "$HOME/.vimrc"
+    cp "./.vimrc" "$HOME/.vimrc"
 
     echo ".vimrc has been updated successfully."
 else
     echo "Updated .vimrc file not found in the current directory."
 fi
-
