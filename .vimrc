@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+filetype plugin indent on
+
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
