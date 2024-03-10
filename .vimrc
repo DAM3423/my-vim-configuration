@@ -33,3 +33,6 @@ nnoremap <silent> <C-o> :Files<CR>
  
 " control + n to toggle NERDTree
 nmap <C-n> :NERDTreeToggle<CR>
+
+" control + f to find in all files
+nnoremap <silent> <C-f> :Rg<CR>
