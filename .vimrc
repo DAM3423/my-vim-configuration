@@ -12,6 +12,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+let g:airline_powerline_fonts = 1
+
 " Add indentLine settings below
 let g:indentLine_char = '|'
 let g:indentLine_color_gui = '#A4E57E'
