@@ -18,6 +18,12 @@ let g:airline_powerline_fonts = 1
 let g:indentLine_char = '|'
 let g:indentLine_color_gui = '#A4E57E'
 
+colorscheme onedark
+syntax on
+set number
+highlight Normal ctermbg=None
+highlight LineNr ctermfg=DarkGrey
+
 " Automatically open NERDTree when Vim starts
 autocmd vimenter * NERDTree
 
