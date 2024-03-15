@@ -25,6 +25,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 syntax enable
 set background=dark
 colorscheme onedark
+highlight LineNr ctermfg=Yellow
+set hlsearch
+
+set tabstop=4      " Number of spaces that a <Tab> in the file counts for
+set shiftwidth=4   " Number of spaces to use for each step of (auto)indent
+set expandtab      " Use spaces instead of tabs
 
 " Key Mapping
 nnoremap <silent> <C-o> :Files<CR>
