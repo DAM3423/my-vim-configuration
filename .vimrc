@@ -5,9 +5,10 @@ filetype plugin indent on
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'joshdick/onedark.vim'
 Plug 'posva/vim-vue'
 Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -21,10 +22,7 @@ autocmd vimenter * NERDTree
 " Close Vim if NERDTree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Set the One Dark Pro color scheme
 syntax enable
-set background=dark
-colorscheme onedark
 highlight LineNr ctermfg=Yellow
 set hlsearch
 
